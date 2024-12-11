@@ -1,6 +1,7 @@
+require('dotenv').config();
+
 module.exports = {
-    apiKey: 'YOUR_API_KEY',
-    secretKey: 'YOUR_SECRET_KEY',
-    huobiBaseUrl: 'https://api.huobi.pro',
-  };
-  
+    apiKey: process.env.API_KEY,
+    secretKey: process.env.SECRET_KEY,
+    huobiBaseUrl: process.env.HUOBI_BASE_URL,
+};
