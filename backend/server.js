@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 5000;
 
 const tradingRoutes = require('./routes/tradingRoutes');
 
 app.use(express.json());
 app.use('/api', tradingRoutes);
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
